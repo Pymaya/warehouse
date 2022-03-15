@@ -24,7 +24,7 @@ def stops_interval(startstop,endstop):
         c=abs(v)*charge
     return c
 
-'''     I assume its route is a loop. If endstop is somewhere before startstop on the routine,
+'''     I assume its route is a loop. If endstop is somewhere before startstop on the routing,
         passenger might go to the bottom stop and take a new one starts from the top stop.
 '''
 
