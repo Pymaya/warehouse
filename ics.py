@@ -20,8 +20,14 @@ class Restaurant():
         self.num_served+=i_num
         print(str(self.num_served)+" People were served in our restaurant today.")
 
-a=Restaurant('toilet dine','french')
-a.desc_restaurant()
-a.open_restaurant()
-a.set_num_served(4)
-a.increment_num_served(1)
+class IceCreamStand(Restaurant):
+    def __init__(self,name,cuisine_type,*flavors):
+        super().__init__(name,cuisine_type)
+        self.flavor=flavors
+
+    def desc_icf(self):
+        for i in self.flavor:
+            print(i,end=" ")
+
+ics=IceCreamStand('kfc','fast food','sweet','spicy')
+ics.desc_icf()

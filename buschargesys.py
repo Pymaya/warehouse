@@ -1,4 +1,5 @@
 # everything is idealized.
+
 allstops={
     'a':0,
     'b':1,
@@ -14,6 +15,9 @@ allstops={
     'l':11,
     'm':12,
 } # container for all bus stops.
+
+tiered=False
+
 charge=1.8 # pay 1.8 per stop.
 
 def stops_interval(startstop,endstop):
@@ -24,7 +28,7 @@ def stops_interval(startstop,endstop):
         c=abs(v)*charge
     return c
 
-'''     I assume its route is a loop. If endstop is somewhere before startstop on the routing,
+'''     I assume its routine is a loop. If endstop is somewhere before startstop on the routine,
         passenger might go to the bottom stop and take a new one starts from the top stop.
 '''
 
