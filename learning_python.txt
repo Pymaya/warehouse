@@ -1,0 +1,6 @@
+i learnt how to edit list.
+i learnt how to edit tuple.
+i learnt how to edit dict.
+i learnt how to make a function.
+i learnt how to make a class.
+i learnt how to import funcitons and classes from other files or modules.
