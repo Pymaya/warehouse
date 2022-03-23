@@ -1,5 +1,3 @@
-from re import T
-from turtle import Screen
 import pygame
 import sys
 
