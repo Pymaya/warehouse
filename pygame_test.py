@@ -1,4 +1,3 @@
-from matplotlib.pyplot import pause
 import pygame
 import sys
 import math
