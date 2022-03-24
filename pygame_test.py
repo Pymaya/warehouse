@@ -1,3 +1,4 @@
+from matplotlib.pyplot import pause
 import pygame
 import sys
 import math
@@ -10,7 +11,7 @@ SCREEN_HEIGHT = 960
 SHIP_SPEED_FACTOR = 6
 BULLET_SPEED_FACTOR = 10
 ENEMY_SPEED_FACTOR = 5
-NUM_OF_ENEMIES = 10
+NUM_OF_ENEMIES = 20
 SCORE = 0
 
 pygame.init()
@@ -83,9 +84,12 @@ class Bullet():
         global SCORE
         for enemy in enemies:
             if distance(self.rect.centerx, self.rect.centery, enemy.x + 64, enemy.y + 32) < 60:
-                bullets.remove(self)
-                enemies.remove(enemy)
-                SCORE += 10
+                try:
+                    bullets.remove(self)
+                    enemies.remove(enemy)
+                    SCORE += 10
+                except:
+                    break
 
 def show_bullet():
     for bullet in bullets:
